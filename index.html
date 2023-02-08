@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confetti Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="svg hide" id="svg"></div>
+        <h1>My Card Title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, consequuntur qui. Eveniet, excepturi consequuntur! Eligendi!</p>
+        <button>Get Started</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js" integrity="sha512-fTTVSuY9tLP+l/6c6vWz7uAQqd1rq3Q/GyKBN2jOZvJSLC5RjggSdboIFL1ox09/Ezx/AKwcv/xnDeYN9+iDDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const play = document.querySelector('button');
+        const svgContainer = document.getElementById('svg');
+        const animItem = bodymovin.loadAnimation({
+            wrapper: svgContainer,
+            animItem: 'svg',
+            loop: false,
+            autoplay: false,
+            path: 'https://assets2.lottiefiles.com/packages/lf20_u4yrau.json'
+        });
+        play.addEventListener('click', () => {
+            animItem.goToAndPlay(0,true);
+        })
+    </script>
+</body>
+</html>

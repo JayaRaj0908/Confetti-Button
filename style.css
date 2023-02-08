@@ -1,0 +1,57 @@
+body{
+    background: rgb(27, 27, 27);
+    margin: 0;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    font-family: 'Poppins';
+    color: #fff;
+}
+.container{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    background: #232323;
+    padding: 2em;
+
+    h1{
+        margin: 0;
+    }
+    p{
+        color: gray;
+    }
+}
+button{
+    background: #343434;
+    margin-top: 2em;
+    border: none;
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    outline: 0;
+    cursor: pointer;
+
+    /* &:hover {
+        background: #424242;
+    }
+
+    &:active {
+        background: greenyellow;
+    } */
+}
+button:hover::before{
+    background: #424242;
+}
+button:active{
+    background: greenyellow;
+    color: black;
+}
+.svg{
+    width: 250px;
+    position: absolute;
+    top: -120px;
+    left: -30px;
+    pointer-events: none;
+}
